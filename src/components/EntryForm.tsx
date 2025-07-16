@@ -52,9 +52,17 @@ export default function EntryForm({ onAdd }: Props) {
         value={amount}
         onChange={(e) => setAmount(Number(e.target.value))}
       />
-      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full" type="submit">
-        Agregar
-      </button>
+      <div className='flex column gap-2'> 
+        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full" type="submit">
+          Crear Venta
+        </button>
+        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full" type="submit">
+          Crear Gasto
+        </button>
+        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full" type="submit" >
+          crear 
+        </button>
+      </div>
     </form>
   );
 }

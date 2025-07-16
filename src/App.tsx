@@ -1,11 +1,19 @@
-import CashOut from "./components/CashOut";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SideNav from "./components/SideNav";
+import Dashboard from "./components/pages/Dashboard";
+import Products from "./components/pages/Kart";
 
 function App() {
 
   return (
-    <div className="max-w-xl mx-auto p-4">
-      <CashOut />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<SideNav />}>
+          <Route path='dashboard' element={<Dashboard />} />
+          <Route path='products' element={<Products />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
